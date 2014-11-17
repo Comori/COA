@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <RelativeLayout
+        android:id="@+id/mail_titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/splash_bg_blue" >
+        <ImageView
+            android:id="@+id/title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="8dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/back" />
+        
+        <RadioGroup 
+            android:id="@+id/mail_select_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:background="@drawable/mail_group_bg"
+            >
+            <RadioButton 
+                android:id="@+id/mail_recevieBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:text="@string/recevice_box"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/text_white_color"
+                android:textSize="13sp"
+                android:background="@drawable/mail_recevie_box_selector"
+                android:checked="true"
+                />
+            <RadioButton 
+                android:id="@+id/mail_sendBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:text="@string/send_box"
+                 android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/text_white_color"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:background="@drawable/mail_send_box_seletor"
+                />
+        </RadioGroup>
+    </RelativeLayout>
+    
+    <include 
+        android:id="@+id/mail_searchview"
+        layout="@layout/searchview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mail_titleLayout"
+        />
+    
+    <LinearLayout 
+        android:id="@+id/mail_bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="@color/smoke_white"
+        android:layout_alignParentBottom="true"
+        >
+        <TextView 
+            android:id="@+id/mail_updateInfoTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/text_gray"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"
+            />
+        <ImageView 
+            android:id="@+id/mail_sendImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/faxin_button"
+            android:background="@drawable/mail_send_img_selector"
+            android:layout_margin="5dp"
+            android:clickable="true"
+            />
+    </LinearLayout>
+    
+    <View 
+        android:id="@+id/mail_top_splitline"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/light_gray"
+        android:layout_below="@id/mail_searchview"
+        />
+      <View 
+        android:id="@+id/mail_bootom_splitline"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/light_gray"
+        android:layout_above="@id/mail_bottomLayout"
+        />
+      
+      <FrameLayout 
+          android:id="@+id/mail_content"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_above="@id/mail_bootom_splitline"
+          android:layout_below="@id/mail_top_splitline"
+          >
+          
+      </FrameLayout>
+
+</RelativeLayout>

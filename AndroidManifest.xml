@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.wicp.yunjigroup.oa"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/oa_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="net.wicp.yunjigroup.oa.ui.SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="net.wicp.yunjigroup.oa.ui.LoginActivity"></activity>
+        <activity android:name="net.wicp.yunjigroup.oa.ui.HomeActivity"></activity>
+        <activity android:name="net.wicp.yunjigroup.oa.ui.ContactActivity" android:windowSoftInputMode="adjustPan"></activity>
+        <activity android:name="net.wicp.yunjigroup.oa.ui.SettingActivity"></activity>
+        <activity android:name="net.wicp.yunjigroup.oa.ui.FeedbackActivity"></activity>
+        <activity android:name="net.wicp.yunjigroup.oa.ui.NoticeListActivity"></activity>
+        <activity android:name="net.wicp.yunjigroup.oa.ui.NoticeDetailActivity"></activity>
+        <activity android:name="net.wicp.yunjigroup.oa.ui.AccessoryListActivity"></activity>
+        <activity android:name="net.wicp.yunjigroup.oa.ui.MailActivity"
+            android:windowSoftInputMode="adjustPan"
+            >
+        </activity>
+		 <activity android:name="net.wicp.yunjigroup.oa.ui.MailDetailActivity"></activity>
+		 <activity android:name="net.wicp.yunjigroup.oa.ui.SendMailActivity"  android:windowSoftInputMode="adjustPan"></activity>
+		 <activity android:name="net.wicp.yunjigroup.oa.ui.MailContactActivity"></activity>
+		 <activity android:name="net.wicp.yunjigroup.oa.ui.MeetingActivity"></activity>
+		 <activity android:name="net.wicp.yunjigroup.oa.ui.MeetingDetailActivity"></activity>
+		 <activity android:name="net.wicp.yunjigroup.oa.ui.ScheduleActivity"></activity>
+		 <activity android:name="net.wicp.yunjigroup.oa.ui.ScheduleDetailActivity"></activity>
+		 <activity android:name="net.wicp.yunjigroup.oa.ui.ContactListActivity" android:windowSoftInputMode="adjustPan"></activity>
+		 <activity android:name="net.wicp.yunjigroup.oa.ui.ContactDetailActivity" ></activity>
+		 <activity android:name="net.wicp.yunjigroup.oa.ui.AboutActivity" ></activity>
+        
+    </application>
+    
+
+</manifest>

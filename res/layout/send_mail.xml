@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"  
+   android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/splash_bg_blue" >
+
+        <ImageView
+            android:id="@+id/title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="8dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
+            android:textColor="@color/smoke_white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/title_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/fasong_icon"
+             />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/smoke_white" >
+
+        <TextView
+            android:id="@+id/send_mail_receiveUserTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/recevie_name"
+            android:textColor="@color/text_gray"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/send_mail_addUserImg"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:clickable="true"
+            android:src="@drawable/add_button" />
+        
+        <TextView
+            android:id="@+id/send_mail_receiveUsers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/send_mail_receiveUserTv"
+            android:layout_toRightOf="@id/send_mail_receiveUserTv"
+            android:layout_toLeftOf="@id/send_mail_addUserImg"
+            android:padding="10dp"
+            android:textColor="@color/splash_bg_blue"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/send_mail_line1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/send_mail_receiveUsers"
+            android:layout_marginTop="5dp"
+            android:background="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/send_mail_subjectTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/send_mail_line1"
+            android:padding="10dp"
+            android:text="@string/mail_subject"
+            android:textColor="@color/text_gray"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/send_mail_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/send_mail_subjectTv"
+            android:layout_toRightOf="@id/send_mail_subjectTv"
+            android:background="@null"
+            android:padding="10dp"
+            android:textColor="@color/splash_bg_blue"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/send_mail_line2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/send_mail_subject"
+            android:layout_marginTop="5dp"
+            android:background="@color/light_gray" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/send_mail_contentEdt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:gravity="top"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+</LinearLayout>
